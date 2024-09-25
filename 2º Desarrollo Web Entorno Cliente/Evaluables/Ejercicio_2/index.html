@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS from leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <style>
+        
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		.leaflet-container {
+			height: 400px;
+			width: 600px;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	
+    </style>
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <!-- MAP -->
+    <div id="map"></div>
+    <button id="findISS">Find ISS</button>
+    <!-- SCRIPTS -->
+    <script src="./leaflet.js"></script>
+    
+    <script id="popups">
+        var popup = L.popup();
+
+        function onMapClick(e) {
+            popup
+                .setLatLng(e.latlng)
+                .setContent("You clicked the map at " + e.latlng.toString())
+                .openOn(map);
+        }
+
+        map.on('click', onMapClick);
+        map.on('click', onMapClick);
+    </script>
+    <br>
+    <script>
+        const button = document.getElementById("findISS");
+
+            button.addEventListener('click',()=>{
+
+                async function getIssPosition(){
+                    const position = await fetch("http://api.open-notify.org/iss-now.json")
+                        .then(data => data.json())
+                        .then(data => console.log(data.iss_position))
+                        .catch(err => err)
+
+                        return position;
+                }
+            getIssPosition();
+
+        })
+    </script>
+</body>
+</html>

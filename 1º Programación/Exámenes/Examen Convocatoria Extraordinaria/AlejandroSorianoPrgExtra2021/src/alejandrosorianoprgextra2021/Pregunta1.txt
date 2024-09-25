@@ -1,0 +1,39 @@
+Consiste en la ocultación del estado de los miembros de un objeto, 
+así solo se pueden modificar mediante los metodos definidos de dicho objeto.
+Se hace definiendo sus propiedades como privadas y los métodos como públicos.
+
+Ejemplo:
+
+public class Persona {
+
+    // Los atributos son privados.
+
+    private String nombre;
+    private int edad;
+	
+    // Los metodos son publicos, y se accede a sus atributos mediante ellos.
+
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+    
+    
+    
+}

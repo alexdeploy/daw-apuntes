@@ -1,0 +1,13 @@
+Unit conversion - https://www.unitjuggler.com/memory-conversion.html
+
+Conversor IEEE 754URL - http://www.h-schmidt.net/FloatConverter/IEEE754.html
+
+The binary game - https://studio.code.org/projects/applab/iukLbcDnzqgoxuu810unLw
+
+Flippy bit and the attack of the hexadecimals from base 16 -  http://flippybitandtheattackofthehexadecimalsfrombase16.com/
+
+Binary challenge [Android - iOS] - http://www.binarychallengeapp.com/
+
+Moon - Tableboard game - http://compus.deusto.es/es/moon/
+ 
+Binary Game CISCO - https://learningnetwork.cisco.com/s/binary-game

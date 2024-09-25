@@ -1,0 +1,61 @@
+--Con el usuario system cre un nuevo usuario llamado por ejemplo plsql.
+--CREATE TABLESPACE plsql
+--DATAFILE 'C:\oraclexe\app\oracle\oradata\XE\datosplsql.dbf' SIZE
+--50M AUTOEXTEND ON NEXT 50M MAXSIZE 300M
+--EXTENT MANAGEMENT LOCAL UNIFORM SIZE 10M
+--SEGMENT SPACE MANAGEMENT AUTO;
+
+
+--create user plsql
+--identified by plsql
+--DEFAULT TABLESPACE plsql;
+
+--grant dba to plsql;
+
+
+
+
+--Luego ya crea las tablas dpto y empleado y rell�nalas con los datos siguientes:
+
+CREATE TABLE dpto (
+    num_dpto number(2,0) NOT NULL,
+    nombre_dpto varchar(14),
+    localidad varchar(13),
+    CONSTRAINT dpto_pkey PRIMARY KEY (num_dpto)
+);
+
+CREATE TABLE empleado (
+    num_emp numeric(4,0) NOT NULL,
+    nombre varchar(10),
+    tarea varchar(15),
+    jefe numeric(4,0),
+    fecha_alta date,
+    salario numeric(7,2),
+    num_dpto numeric(2,0),
+    CONSTRAINT empl_pkey PRIMARY KEY (num_emp),
+    CONSTRAINT emp_dptno_fkey FOREIGN KEY (num_dpto) REFERENCES dpto(num_dpto),
+    CONSTRAINT emp_mg_fkey FOREIGN KEY (jefe) REFERENCES empleado(num_emp)
+);
+
+INSERT INTO dpto VALUES (10, 'CUENTAS', 'vALENCIA');
+INSERT INTO dpto VALUES (20, 'PERSONAL', 'MADRID');
+INSERT INTO dpto VALUES (30, 'VENTAS', 'BARCELONA');
+INSERT INTO dpto VALUES (40, 'OPERACIONES', 'MADRID');
+
+insert into empleado values (7839, 'SUPER JEFE'   ,    'PRESIDENTE',   NULL, to_date('17/11/1981','dd/mm/yyyy') ,      5000,10);        
+insert into empleado values (7566, 'MARTINEZ'  ,    'MANAGER'  ,   7839, to_date('02/04/1981','dd/mm/yyyy') ,      2975,20);        
+insert into empleado values (7902, 'GARCIA'   ,    'ANALISTA'  ,   7566, to_date('03/12/1981','dd/mm/yyyy') ,      3000,20);        
+insert into empleado values (7369, 'LOPEZ'  ,    'CONSERJE'    ,   7902, to_date('17/12/1980','dd/mm/yyyy') ,       800, 20);
+insert into empleado values (7698, 'BUENO'  ,    'MANAGER'  ,   7839, to_date('01/05/1981','dd/mm/yyyy') ,      2850, 30);        
+insert into empleado values (7499, 'RODRIGUEZ'  ,    'COMERCIAL' ,   7698, to_date('20/02/1981','dd/mm/yyyy') ,      1600,30);        
+insert into empleado values (7521, 'FEIJOO'   ,    'COMERCIAL' ,   7698, to_date('22/02/1981','dd/mm/yyyy') ,      1250, 30);        
+insert into empleado values (7654, 'MARTIN' ,    'COMERCIAL' ,   7698, to_date('28/09/1981','dd/mm/yyyy') ,      1250, 30);        
+insert into empleado values (7782, 'MARTINEZ'  ,    'MANAGER'  ,   7839, to_date('09/06/1981','dd/mm/yyyy') ,      2450, 10);        
+insert into empleado values (7788, 'GUTIERREZ'  ,    'ANALISTA'  ,   7566, to_date('09/12/1982','dd/mm/yyyy') ,      3000,  20);        
+insert into empleado values (7844, 'BONILLA' ,    'COMERCIAL' ,   7698, to_date('08/09/1981','dd/mm/yyyy') ,      1500,30);        
+insert into empleado values (7876, 'SAIZ'  ,    'CONSERJE'    ,   7788, to_date('12/01/1983','dd/mm/yyyy') ,      1100, 20);        
+insert into empleado values (7900, 'SAEZ'  ,    'CONSERJE'    ,   7698, to_date('03/12/1981','dd/mm/yyyy') ,       950, 30);        
+insert into empleado values (7934, 'MARTINEZ' ,    'CONSERJE'    ,   7782, to_date('23/01/1982','dd/mm/yyyy') ,      1300, 10);        
+
+select * from dpto;
+select * from empleado;

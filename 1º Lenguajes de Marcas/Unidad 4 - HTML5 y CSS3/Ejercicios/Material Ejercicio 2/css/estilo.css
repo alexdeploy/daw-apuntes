@@ -1,0 +1,40 @@
+body {
+
+    
+}
+#menu ul li {
+
+display: inline;
+   list-style-type: none;
+   padding: 20px;
+
+}
+
+#izq {
+    width: 20%;
+background-color: blue;
+
+}
+
+#noticias {
+    
+background-color: blue;
+float: left
+}
+
+#enlaces {
+    
+    background-color: blue;
+    float: left
+    
+    }
+
+
+    #publicidad {
+       
+        background-color: blue;
+        float: left
+        
+        }
+
+}

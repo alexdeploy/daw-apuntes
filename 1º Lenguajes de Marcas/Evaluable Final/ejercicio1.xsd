@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+   <xs:element name="music">
+     <xs:complexType>
+       <xs:all>
+         <xs:element name="discs">
+           <xs:complexType>
+             <xs:sequence>
+               <xs:element name="disc" maxOccurs="unbounded">
+                 <xs:complexType mixed="true">
+                   <xs:sequence>
+                     <xs:element name="premiere" type="xs:string"/>
+                     <xs:element name="title" type="xs:string"/>
+                     <xs:element name="group">
+                       <xs:complexType>
+                         <xs:simpleContent>
+                           <xs:extension base="xs:string">
+                             <xs:attribute name="fecha_nacimiento" type="xs:string" use="optional"/>
+                             <xs:attribute name="pais_nacimiento" type="xs:string" use="optional"/>
+                           </xs:extension>
+                         </xs:simpleContent>
+                       </xs:complexType>
+                     </xs:element>
+                     <xs:element name="singer" minOccurs="0">
+                       <xs:complexType>
+                         <xs:simpleContent>
+                           <xs:extension base="xs:string">
+                             <xs:attribute name="fecha_nacimiento" type="xs:string" use="optional"/>
+                             <xs:attribute name="pais_nacimiento" type="xs:string" use="optional"/>
+                           </xs:extension>
+                         </xs:simpleContent>
+                       </xs:complexType>
+                     </xs:element>
+                   </xs:sequence>
+                   <xs:attribute name="titulo" type="xs:string" use="required"/>
+                 </xs:complexType>
+               </xs:element>
+             </xs:sequence>
+           </xs:complexType>
+         </xs:element>
+       </xs:all>
+     </xs:complexType>
+   </xs:element>
+</xs:schema>
+
+<!--Nombre: Alejandro Soriano Rueda-->
+

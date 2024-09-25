@@ -1,0 +1,253 @@
+-- Ejercicio 1 ( ATT: La consola de phpMyAdmin no acepta todos los comandos!)
+--En MySQL se puede usar tambi�n el tipo ENUM: genero ENUM ('suspense','accion','terror','comedia','drama','cienciafic')
+
+CREATE TABLE peliculas(
+  cod_pel INTEGER CHECK (cod_pel > 0),
+  nombre VARCHAR(50) NOT NULL,
+  director VARCHAR(50),
+  anyo date,
+  genero varchar(10) CHECK (genero IN ('suspense','accion','terror','comedia','drama','cienciafic')), 
+  visionada varchar(2) CHECK (visionada IN ('si','no')),
+  CONSTRAINT PEL_COD_PK PRIMARY KEY(cod_pel)
+);
+
+
+
+-----------------
+-----------------
+
+-- Ejercicio 2
+
+CREATE TABLE pais (
+  nombre_p VARCHAR(30),
+  bandera VARCHAR(70),
+  renta FLOAT,
+  constraint pai_nom_pk PRIMARY KEY (nombre_p)
+);
+
+CREATE TABLE ciudad (
+  nombre_c VARCHAR(40),
+  habitantes INTEGER,
+  nombre_p VARCHAR(30),
+  constraint ciu_nom_pk PRIMARY KEY  (nombre_c,nombre_p),
+  constraint ciu_nom_fk FOREIGN KEY (nombre_p) REFERENCES pais (nombre_p)
+);
+-----------------
+-----------------
+
+-- Ejercicio 3
+
+CREATE TABLE pleito (
+  cod_pleito INTEGER,
+  resultado VARCHAR(10) CHECK (resultado IN ('culpable','inocente','sobreseido')),
+  constraint ple_cod_pk PRIMARY KEY (cod_pleito)
+);
+
+CREATE TABLE recurso (
+  cod_rec INTEGER NOT NULL UNIQUE,
+  fecha DATE,
+  cod_pleito INTEGER,
+  constraint rec_cod_pk PRIMARY KEY  (cod_rec,cod_pleito),
+  constraint rec_cod_fk FOREIGN KEY (cod_pleito) REFERENCES pleito (cod_pleito)
+  -- constraint rec_cod_uk UNIQUE (cod_rec) --> tambi�n se acepta
+);
+
+-----------------
+-----------------
+
+-- Ejercicio 4
+
+CREATE TABLE empleado (
+  cod_emp INTEGER,
+  telf VARCHAR(9),
+  constraint emp_cod_pk PRIMARY KEY (cod_emp)
+);
+
+CREATE TABLE cliente (
+  dni VARCHAR(9),
+  nombre VARCHAR(30),
+  apellidos VARCHAR(60),
+  constraint cli_dni_pk PRIMARY KEY  (dni)
+);
+
+CREATE TABLE coche (
+  n_bastidor VARCHAR(17),
+  marca VARCHAR(20),
+  modelo VARCHAR(15), 
+  color VARCHAR(8) CHECK (color IN ('rojo','blanco','azul','negro','plata','gris','amarillo','verde')), 
+  matricula VARCHAR(7) UNIQUE, 
+  constraint coc_nba_pk PRIMARY KEY (n_bastidor)
+);
+
+-- Oracle
+CREATE TABLE venta (
+  cod_emp INTEGER NOT NULL,
+  dni VARCHAR(9),
+  n_bastidor VARCHAR(17),
+  fecha DATE constraint ven_fec_VN NOT NULL, -- el constraint de NOT NULL es el �nico que no se puede poner abajo como el resto
+  precio INTEGER CHECK (precio > 0) NOT NULL,
+  constraint ven_nba_pk PRIMARY KEY  (n_bastidor,dni),
+  constraint ven_cod_fk FOREIGN KEY (cod_emp) REFERENCES empleado (cod_emp),
+  constraint ven_dni_fk FOREIGN KEY (dni) REFERENCES cliente (dni),
+  constraint ven_nba_fk FOREIGN KEY (n_bastidor) REFERENCES coche (n_bastidor)
+);
+
+-- MySQL
+CREATE TABLE venta (
+  cod_emp INTEGER NOT NULL,
+  dni VARCHAR(9),
+  n_bastidor VARCHAR(17),
+  fecha DATE NOT NULL, -- MySQL no acepta nombre de restricci�n aqu�
+  precio INTEGER NOT NULL, -- MySQL no acepta la restricci�n de CHECK aqu� si ya existe otra restricci�n
+  constraint ven_nba_pk PRIMARY KEY  (n_bastidor,dni),
+  constraint ven_cod_fk FOREIGN KEY (cod_emp) REFERENCES empleado (cod_emp),
+  constraint ven_dni_fk FOREIGN KEY (dni) REFERENCES cliente (dni),
+  constraint ven_nba_fk FOREIGN KEY (n_bastidor) REFERENCES coche (n_bastidor),
+  constraint ven_pre_ck check (precio>0)
+);
+
+-----------------
+-----------------
+
+-- Ejercicio 5 
+--Para consultar el diccionario de datos, es conveniente primero averiguar la tabla a consultar y despu�s qu� campos visualizar para evitar que se nos llene la consola de informaci�n que dificulta 
+--su consulta. En el aula virtual ten�is las tablas de consulta m�s usuales, por ejemplo la tabla de restricciones (en Oracle, USER_CONSTRAINTS y en MySQL REFERENTIAL_CONSTRAINTS).
+-- Si queremos visualizar sus campos haremos por ej.: desc USER_CONSTRAINTS;
+
+--MySQL
+use information_schema; --cambiamos de DB
+SELECT CONSTRAINT_NAME FROM REFERENTIAL_CONSTRAINTS WHERE TABLE_NAME='Recurso';
+SELECT CONSTRAINT_NAME, COLUMN_NAME, REFERENCED_TABLE_NAME, REFERENCED_COLUMN_NAME FROM KEY_COLUMN_USAGE WHERE TABLE_NAME='Recurso'; --Esta tabla nos aporta m�s informaci�n
+
+--ORACLE
+SELECT CONSTRAINT_NAME, INDEX_NAME, CONSTRINT_TYPE FROM USER_CONSTRAINTS WHERE TABLE_NAME='RECURSO';
+
+
+
+-----------------
+-----------------
+
+-- Ejercicio 6 (Igual en Oracle y MySQL)
+-- A�ade la columna juez de tipo cadena(50) a la tabla Pleito del ejercicio 3.
+
+ALTER TABLE pleito ADD (juez) VARCHAR(50); -- funciona tambi�n sin el par�ntesis tras ADD
+
+
+
+
+-----------------
+-----------------
+
+-- Ejercicio 7 
+-- A�ade la columna nombre de tipo cadena(50) a la tabla Empleado del ejercicio4
+
+ALTER TABLE empleado ADD nombre VARCHAR(50); 
+
+-----------------
+-----------------
+
+-- Ejercicio 8 (Igual en Oracle y MySQL)
+-- Modifica la columna precio de la tabla Venta del ejercicio 4 para que su tipo
+-- ahora sea coma flotante. Mant�n las restricciones que tuviera
+
+ALTER TABLE venta MODIFY (precio) FLOAT; -- funciona tambi�n sin el par�ntesis tras MODIFY
+
+
+-----------------
+-----------------
+
+-- Ejercicio 9
+-- Borra la columna director de la tabla Pel�culas del ejercicio 1.
+
+--ORACLE
+ALTER TABLE peliculas DROP (director); -- NO funciona sin el par�ntesis tras DROP en ORACLE
+
+-- MySQL
+ALTER TABLE peliculas DROP director; -- NO funciona CON el par�ntesis tras DROP en MySQL
+
+-----------------
+-----------------
+
+-- Ejercicio 10 (Igual en Oracle y MySQL)
+-- Borra la tabla Pel�culas del ejercicio 1
+
+DROP TABLE peliculas; -- No es necesario DROP TABLE peliculas CASCADE CONSTRAINTS; pq no tiene dependencias con otras tablas.
+-----------------
+-----------------
+
+-- Ejercicio 11 (Igual en Oracle y MySQL)
+-- A�ade la restricci�n habitantes > 0 a la tabla Ciudad creada en el ejercicio 2.
+
+ALTER TABLE ciudad ADD CONSTRAINT ciu_hat_CK CHECK (habitantes > 0);
+
+ALTER TABLE ciudad ADD CHECK (habitantes > 0); -- sin nombre de restricci�n
+
+-- Tanto Oracle como MySQL ejecutan la sentencia, pero al probar a insertar datos en la tabla con un valor de habitantes=0, Oracle ejecuta la restricci�n pero MySQL NO!
+
+-----------------
+-----------------
+
+-- Ejercicio 12 (S�lo ORACLE)
+--Deshabilita la restricci�n de VNN: {fecha} sobre la tabla Venta del ejercicio 4.
+ALTER TABLE venta DISABLE CONSTRAINT ven_fec_VN CASCADE;
+
+-----------------
+-----------------
+
+-- Ejercicio 13 (ORACLE)
+-- Borra la restricci�n �nico: {cod_rec} sobre la tabla Recurso del ejercicio 3.
+
+ALTER TABLE recurso DROP UNIQUE(cod_rec) CASCADE;
+
+-- En MySQL se borra por el nombre de la restricci�n, si no le pusimos, tendremos q buscarlo en el diccionario de datos:
+-- SELECT * FROM KEY_COLUMN_USAGE WHERE TABLE_NAME='recurso'; 
+-- 
+-- Tambi�n podr�ais recordar c�mo cre�steis la tabla ejecutando: show create table mitabla; 
+-- En el caso de la restricci�n UNIQUE no funciona el borrado, con otras restricciones como FK podr�amos hacer:
+
+-- ALTER TABLE mitabla DROP FOREIGN KEY nombre_constraint;
+-- 
+
+
+--�Qu� obtendr�amos con ello? �Crees que es correcto?
+-- Que se podr�an poner valores repetidos en el campo cod_rec al quitar esta restricci�n
+-- No es correcto dado que forma parte de la clave principal
+-----------------
+-----------------
+
+-- Ejercicio 14 (ORACLE)
+--Renombra la restricci�n CAj: {dni} -> Cliente a �Venta_FK_cliente� de la tabla Venta del ejercicio 4.
+ALTER TABLE venta RENAME CONSTRAINT ven_dni_fk TO Venta_FK_cliente;
+
+-----------------
+-----------------
+
+-- Ejercicio 15 (ORACLE)
+-- Crea los siguientes dos sin�nimos:
+-- Empleado -> Emp
+CREATE SYNONYM emp FOR empleado; --Si est�s trabajando desde el usuario "alumno" oracle responder�: 
+--Insufficient privileges. Recuerdo cambiarte al rol sysdba para poder ejecutar esta sentencia. O dotar al usuario "alumno" de ese privilegio:
+-- GRANT CREATE SYNONYM TO alumno;
+
+-- Cliente -> Cli
+CREATE SYNONYM cli FOR cliente; -- Mismas consideraciones que en el ejemplo anterior.
+-----------------
+-----------------
+
+-- Ejercicio 16 (ORACLE)
+-- Cambia el nombre de la tabla Empleado por Trabajador
+
+ALTER TABLE empleado RENAME TO trabajador;
+--�Funciona ahora el
+-- sin�nimo creado en el ejercicio anterior que hacia referencia a Empleado?
+-- Podemos comprobarlo ejecutando las siguientes �rdenes:
+select * from empleado;
+select * from emp;
+select * from trabajador;
+
+--como podr�is observar, al renombrar la tabla ya no funciona el sin�nimo.
+
+
+
+
+

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coches SYSTEM "ejercicio2.dtd">
+<coches>
+   <fecha_actualizado>11/05/2020</fecha_actualizado>
+   <coche matricula="L1">1234abc</coche>
+   <multa matricula="L1">100</multa>
+   <coche matricula="L2">2345tre</coche>
+   <multa matricula="L2">200</multa>
+   <coche matricula="L3">3434feo</coche>
+   <coche matricula="L4">2233ytu</coche>
+   <coche matricula="L5">2233mas</coche>
+   <multa matricula="L3">100</multa>
+   <multa matricula="L4">133</multa>
+</coches> 

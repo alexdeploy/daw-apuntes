@@ -1,0 +1,7 @@
+BD05 Tutorial SQL - https://www.youtube.com/playlist?list=PLU8oAlHdN5Bmx-LChV4K3MbHrpZKefNwn
+
+BD05 Tutorial MySQL - https://www.youtube.com/playlist?list=PLZdsdjcJ44WVBkq0CNfawyI5eXOOcnRxG
+
+BD05 Khan Academy - https://es.khanacademy.org/computing/computer-programming/sql
+
+BD05 Codeacademy - https://www.codecademy.com/catalog/language/sql

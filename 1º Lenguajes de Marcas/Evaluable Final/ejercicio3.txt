@@ -1,0 +1,15 @@
+
+EJERCICIO 3
+
+ a) //musico/autodidacta/../nombre
+
+ b) //musico[@id="Beethoven"]/nombre
+
+ c) //obra[nombre="Las cuatro estaciones"]/genero/@nombre
+
+ d) //musico[@id="Bach"]/muerte/text()-//musico[@id="Bach"]/nacimiento/text()
+
+ e) //obra[autor=//musico[pais="Italia"]/@id]/nombre/text()
+
+
+Nombre: Alejandro Soriano Rueda

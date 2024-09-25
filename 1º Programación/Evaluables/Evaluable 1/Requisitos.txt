@@ -1,0 +1,13 @@
+Realiza el Ejercicio Collatz cuyo enunciado esta colgado al lado de este enlace.
+
+Sube una captura para el código con su ejecución y otra para el ordinograma y el fichero .java del codigo si lo añadis mejor por si hay dudas.
+
+No los comprimas. Puedes usar un pdf para ponerlo todo.
+
+La nota formará parte de la nota de las actividades evaluables de la primera evaluación.
+
+Limite de entrega: 29-11-2021. Tiempo para su realización: 16 días.
+
+Se aplaza la fecha limite de entrega hasta el 6 de Enero del 2021.  En la entrevista se corregirá la práctica.
+
+Un saludo.

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<personas calificacion="aprobados" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation ="7.elem.atrib.n.elem.atrib.xsd">
+  <persona dni="12345678">Mireia García</persona>
+  <profesor dni="187654321">Aitor Menta</profesor>
+</personas>

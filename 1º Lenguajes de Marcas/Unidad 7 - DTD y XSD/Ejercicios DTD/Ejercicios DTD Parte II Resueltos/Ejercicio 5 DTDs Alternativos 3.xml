@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE liga_de_futbol [
+<!ELEMENT liga_de_futbol (partido*)>
+<!ELEMENT partido EMPTY>
+<!ATTLIST partido local CDATA #REQUIRED>
+<!ATTLIST partido goles_local CDATA #REQUIRED>
+<!ATTLIST partido visitante CDATA #REQUIRED>
+<!ATTLIST partido goles_visitante CDATA #REQUIRED>
+
+
+]>
+
+<liga_de_futbol>
+   <partido local="Notthingham Presa" goles_local="0" visitante="Inter de Mitente" goles_visitante="1"/>
+</liga_de_futbol>

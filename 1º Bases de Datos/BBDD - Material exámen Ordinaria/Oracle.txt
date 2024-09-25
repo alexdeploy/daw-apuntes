@@ -1,0 +1,57 @@
+
+Conectar -> connect o conn as sysdba (sin usuario concreto)
+
+usuarios -> system / sys
+
+Mostrar usuario conectado -> show user
+
+Mostrar variables del sistema -> SELECT "" from dual;
+
+Comentarios -> -- "" o /* "" */
+
+* Para crear usuarios debemos estar conectados como administradores (sysdba)
+
+* Siempre que se crea un nuevo usuario, hay que indicarle qué espacio de tablas
+va a utilizar. En caso de no especificarse ninguno, se utiliza el espacio por
+defecto USERS.
+
+Utilizar script -> @ ruta del archivo
+
+--------------------------------------
+
+The CHECK constraint is used to limit the value range that can be placed in a column.
+
+SQL Server / Oracle / MS Access:
+
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int CHECK (Age>=18)
+);
+
+To allow naming of a CHECK constraint, and for defining a CHECK constraint on multiple columns:
+
+CONSTRAINT CHK_Person CHECK (Age>=18 AND City='Sandnes')
+
+To create a CHECK constraint on the "Age" column when the table is already created:
+
+ALTER TABLE Persons
+ADD CONSTRAINT CHK_PersonAge CHECK (Age>=18 AND City='Sandnes');
+
+To drop a CHECK constraint:
+
+ALTER TABLE Persons
+DROP CONSTRAINT CHK_PersonAge;
+
+(en mysql es DROP CHECK ...)
+
+
+
+
+
+
+
+
+
+

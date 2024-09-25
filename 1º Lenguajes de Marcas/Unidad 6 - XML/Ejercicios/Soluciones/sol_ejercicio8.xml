@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<catalogo>
+	<!-- **********LIBRERÍA 1**************-->
+	<libreria nombre="Ebooks Baratos" web="http://www.cheapebooks.com">
+		<libro>
+			<ISBN>123456789</ISBN>
+			<tematica nivel="Básico">XML</tematica>
+			<titulo>Introducción a XML</titulo>
+			<autor>Perico de los palotes</autor>
+			<autor>Antonio de los palotes</autor>
+			<editorial>La cabaña de los cuentos</editorial>
+			<fecha num_edicion="3">27 - 09 - 1999</fecha>
+			<web_site>http://xmlintroduction.html</web_site>
+			<precio moneda="euro">35.56</precio>
+		</libro>
+		<libro>
+			<ISBN>987654321</ISBN>
+			<tematica nivel="Avanzado">XML</tematica>
+			<titulo>XML para expertos</titulo>
+			<autor>Perico de los pimientos</autor>
+			<autor>Antonio de las naranjas</autor>
+			<editorial>La casa oscura</editorial>
+			<fecha num_edicion="1">02 - 09 - 2002</fecha>
+			<web_site>http://xmladvanced.html</web_site>
+			<precio moneda="dolar">39.56</precio>
+		</libro>
+	</libreria>
+	<!-- **********LIBRERÍA 2**************-->
+	<libreria nombre="Ebooks a tutti pleni" web="http://www.tuttipleniebooks.com">
+		<libro>
+			<ISBN>888987896</ISBN>
+			<tematica nivel="Intermedio">XML</tematica>
+			<titulo>XML pa el que se la pele</titulo>
+			<autor>Camilo José Cela</autor>
+			<autor>Juan Ramón Jimenez</autor>
+			<editorial>Libros pirata</editorial>
+			<fecha num_edicion="22">01 - 08 - 2011</fecha>
+			<web_site>http://xmlpalqueselapele.html</web_site>
+			<precio moneda="dolar argentino">33000.55</precio>
+		</libro>
+		<libro>
+			<ISBN>123456789</ISBN>
+			<tematica nivel="Básico">XML</tematica>
+			<titulo>Introducción a XML</titulo>
+			<autor>Perico de los palotes</autor>
+			<autor>Antonio de los palotes</autor>
+			<editorial>La cabaña de los cuentos</editorial>
+			<fecha num_edicion="3">27 - 09 - 1999</fecha>
+			<web_site>http://xmlintroduction.html</web_site>
+			<precio moneda="euro">10.56</precio>
+		</libro>		
+	</libreria>
+</catalogo>
+

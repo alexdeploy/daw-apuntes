@@ -1,0 +1,3 @@
+Learning Shell scripting online - https://www.learnshell.org/
+
+Practice Shell scripting online by challenges - https://www.hackerrank.com/domains/shell

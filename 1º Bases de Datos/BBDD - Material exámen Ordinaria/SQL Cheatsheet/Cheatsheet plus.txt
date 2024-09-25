@@ -1,0 +1,8 @@
+- BETWEEN
+
+- IN / NOT IN -> El operador IN nos permite crear fltros para comprobar si el valor de un campo se encuentra
+dentro de un conjunto de datos.
+
+- LIKE -> '__' (numero de caracteres) o '%' (Incluye...) Ejemplo ='47%'
+
+- FUNCIONES RESUMEN - SUM / AVG / COUNT(*) / MAX / MIN

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<libros>
+
+   <libreria>
+   
+     <libro>
+       <titulo>Ejemplo 1</titulo>
+       <ISBN></ISBN>
+       <nivel></nivel>
+       <autores></autores>
+       <editorial></editorial>
+       <fecha_publicacion></fecha_publicacion>
+       <pagina_web></pagina_web>
+       <precio></precio>
+       </libro>
+       
+       <libro>
+       <titulo>Ejemplo 2</titulo>
+       <ISBN></ISBN>
+       <nivel></nivel>
+       <autores></autores>
+       <editorial></editorial>
+       <fecha_publicacion></fecha_publicacion>
+       <pagina_web></pagina_web>
+       <precio></precio>
+       </libro>
+       
+   </libreria>
+
+   <libreria>
+   
+     <libro>
+       <titulo>Ejemplo 1</titulo>
+       <ISBN></ISBN>
+       <nivel></nivel>
+       <autores></autores>
+       <editorial></editorial>
+       <fecha_publicacion></fecha_publicacion>
+       <pagina_web></pagina_web>
+       <precio></precio>
+       </libro>
+       
+       <libro>
+       <titulo>Ejemplo 2</titulo>
+       <ISBN></ISBN>
+       <nivel></nivel>
+       <autores></autores>
+       <editorial></editorial>
+       <fecha_publicacion></fecha_publicacion>
+       <pagina_web></pagina_web>
+       <precio></precio>
+       </libro>
+       
+   </libreria>
+
+</libros>

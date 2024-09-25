@@ -1,0 +1,4 @@
+# Ignore cypress at the moment
+node_modules/
+dist/
+yarn-error.log

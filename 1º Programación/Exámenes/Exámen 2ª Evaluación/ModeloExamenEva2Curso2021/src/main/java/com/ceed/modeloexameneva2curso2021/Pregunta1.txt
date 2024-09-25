@@ -1,0 +1,4 @@
+Los atributos deben ser private.
+Ejemplo:
+private String nombre;
+

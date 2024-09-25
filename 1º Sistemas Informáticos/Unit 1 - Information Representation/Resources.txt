@@ -1,0 +1,17 @@
+Conversor IEEE 754 - http://www.h-schmidt.net/FloatConverter/IEEE754.html 
+
+The binary game - https://studio.code.org/projects/applab/iukLbcDnzqgoxuu810unLw
+
+Flippy bit and the attack of the hexadecimals from base 16 - http://flippybitandtheattackofthehexadecimalsfrombase16.com/
+
+Binary challenge [Android - iOS] - http://www.binarychallengeapp.com/
+
+Moon - Tableboard game - http://compus.deusto.es/es/moon/ 
+
+Binary Game CISCO - https://learningnetwork.cisco.com/s/binary-game
+
+VIDEOS
+
+01 - Subtraction in binary - https://www.youtube.com/watch?v=X9EUNi5aUDw&t=33s
+
+02 - Convert real number to binary code - https://www.youtube.com/watch?v=fP2yvSFZ4v0

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+
+<disco titulo="A Hard Days night" grupo="The Beatles">
+   
+   <canciones>
+     
+     <c1 numero="1">A Hard Day's Night</c1>
+     <c2 numero="2">I Should Have Known Better</c2>
+     <c3 numero="3">If I Feel</c3>
+     <c4 numero="4">I'm Happy Just to Dance With You</c4>
+     <c5 numero="5">And I Love Her</c5>
+     <c6 numero="6">Tell Me Why</c6>
+     <c7 numero="7">Can't Buy Me Love</c7>
+     <c8 numero="8">Any Time at All</c8>
+     <c9 numero="9">I'll Cry Instead</c9>
+     <c10 numero="10">Things We Said Today</c10>
+     <c11 numero="11">When I Get Home</c11>
+     <c12 numero="12">I'll Be Back</c12>
+     
+   </canciones>
+   <creditos año="1964" discografia="EMI Records">
+   <p>Original sound recordings made by EMI Records LTD</p>
+   </creditos>
+   
+   <autores>
+     <autor>John Lennon</autor>
+     <autor>Paul McCartney</autor>
+   
+   
+   </autores>
+   
+   <codigo_barras>7777-46437-2</codigo_barras>
+   <CDP>7 46437 2</CDP>
+   
+</disco>

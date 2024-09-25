@@ -1,0 +1,9 @@
+<!ELEMENT coches (fecha_actualizado, (coche | multa)+)>
+<!ELEMENT fecha_actualizado (#PCDATA)>
+<!ELEMENT coche (#PCDATA)>
+<!ELEMENT multa (#PCDATA)>
+<!ATTLIST coche matricula ID #REQUIRED>
+<!ATTLIST multa matricula IDREF #REQUIRED>
+
+
+<!-- Nombre: Alejandro Soriano Rueda-->

@@ -1,0 +1,92 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Formulario datos personales.</title>
+  
+</head>
+
+<body>
+<h1>Ejemplo de formulario</h1>
+
+<form action="php/maneja_formulario.php" method="post">
+  <fieldset id="a">
+    <legend>Datos personales</legend>
+    <table border="0">
+    <tr>
+          <td><strong>A</strong>pellidos: 
+			<p><input type="text" name="apellidos" size="40" accesskey="a" /></p>
+          </td>
+          <td>N<strong>o</strong>mbre: 
+			<p><input type="text" name="nombre" size="20" accesskey="o" /></p>
+          </td>
+          <td><strong>D</strong>NI: 
+            <p><input type="text" name="dni" maxlength="11" size="12" accesskey="d" /></p>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>N</strong>acido en: 
+            <p><input type="text" name="nacido_en_localidad" size="30" accesskey="n" /></p>
+          </td>
+          <td>Provincia: 
+            <select name="nacido_en_provincia">
+              <option value="Alicante">Alicante</option>
+              <option value="Castellon">Castellón</option>
+              <option value="Valencia" selected="selected">Valencia</option>
+              <option value="Otros">Otros</option>
+            </select>
+           </td>
+          <td><strong>F</strong>echa nacimiento (dd/mm/aaaa): 
+            <input type="text" name="nacido_en_fecha" maxlength="10" size="12" accesskey="f" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">Do<strong>m</strong>icilio: 
+
+            <p>
+            <select name="domicilio_tipo">
+              <option value="-1" selected="selected"></option>
+              <option value="Calle">Calle</option>
+              <option value="Plaza">Plaza</option>
+              <option value="Avenida">Avenida</option>
+            </select>
+             <input type="text" name="domicilio_direccion" size="60"
+            accesskey="m" /></p>
+          </td>
+          <td><strong>C</strong>ódigo Postal: 
+
+            <p><input type="text" name="domicilio_cp" maxlength="5" size="6"
+            accesskey="c" /></p>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>L</strong>ocalidad: <br />
+            <input type="text" name="domicilio_localidad" size="30"
+            accesskey="l" /></td>
+          <td>Provincia: 
+
+            <p>
+            <select name="domicilio_provincia">
+              <option value="Alicante">Alicante</option>
+              <option value="Castellon">Castellón</option>
+              <option value="Valencia" selected="selected">Valencia</option>
+              <option value="Otros">Otros</option>
+            </select>
+             </p>
+          </td>
+          <td><strong>T</strong>eléfono: 
+
+            <p><input type="text" name="telefono" maxlength="9" size="10"
+            accesskey="t" /></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="derecha">
+    <input type="reset" value="Borrar todo" name="Reset" /> 
+    <input type="submit" value="Enviar" /></p>
+  </fieldset>
+</form>
+</body>
+</html>

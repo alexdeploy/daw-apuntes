@@ -1,0 +1,20 @@
+<!--Para el diseño de este DTD he supuesto que:
+    - El elemento "web" puede o no aparecer.
+    - El atributo "precio" he creido conveniente que sea obligatorio.
+-->
+<!ELEMENT catalogo (libreria*)>
+<!ELEMENT libreria (libro+)>
+<!ATTLIST libreria nombre CDATA #REQUIRED>
+<!ATTLIST libreria web CDATA #IMPLIED>
+<!ELEMENT libro (ISBN, tematica, titulo, autor+, editorial, fecha, web_site?, precio)>
+<!ELEMENT ISBN (#PCDATA)>
+<!ELEMENT tematica (#PCDATA)>
+<!ATTLIST tematica nivel (Básico | Intermedio | Avanzado) #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT editorial (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ATTLIST fecha num_edicion NMTOKEN #REQUIRED>
+<!ELEMENT web_site (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio moneda (euro | dolar) #REQUIRED>

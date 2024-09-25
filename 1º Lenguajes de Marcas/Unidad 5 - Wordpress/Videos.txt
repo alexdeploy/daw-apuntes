@@ -1,0 +1,20 @@
+
+- Como crear una cuenta en awardspace.com:
+
+https://www.youtube.com/watch?v=Wfa3U3DPxKc&feature=emb_logo
+
+- Como instalar WordPress en local usando bitnami versión 2018:
+
+https://www.youtube.com/watch?v=Jp81i_yrpZo&feature=emb_logo
+
+- Como crear entradas de blog:
+
+https://www.youtube.com/watch?v=_93ISMhaBFw&feature=emb_logo
+
+- Wordpress como crear páginas y menús:
+
+https://www.youtube.com/watch?v=wYs_a9HeoAU&feature=emb_logo
+
+Como añadir widget a la barra lateral de la página:
+
+- https://www.youtube.com/watch?v=12BZrRmP6CQ&feature=emb_logo

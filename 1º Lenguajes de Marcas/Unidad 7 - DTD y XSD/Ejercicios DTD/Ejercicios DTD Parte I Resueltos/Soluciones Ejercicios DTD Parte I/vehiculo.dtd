@@ -1,0 +1,19 @@
+<!--Para el diseño de este DTD he supuesto que:
+    - El elemento "extra" puede o no aparecer varias veces.
+    - El elemento "foto" puede o no aparecer varias veces.
+	 - Los atributos "color", "combustible" y "valor" son obligatorios.
+-->
+ <!ELEMENT oferta (vehiculo*)>
+   <!ELEMENT vehiculo (marca, modelo, motor, matricula, kilometros, precio_inicial, precio_oferta, extra*, foto*)>
+     <!ELEMENT marca (#PCDATA)>
+     <!ELEMENT modelo (#PCDATA)>
+     <!ATTLIST modelo color NMTOKEN #REQUIRED>
+     <!ELEMENT motor (#PCDATA)>
+     <!ATTLIST motor combustible (gasolina | diesel) #REQUIRED>
+     <!ELEMENT matricula (#PCDATA)>
+     <!ELEMENT kilometros (#PCDATA)>
+     <!ELEMENT precio_inicial (#PCDATA)>
+     <!ELEMENT precio_oferta (#PCDATA)>
+     <!ELEMENT extra (#PCDATA)>
+     <!ATTLIST extra valor NMTOKEN #REQUIRED>
+     <!ELEMENT foto (#PCDATA)>

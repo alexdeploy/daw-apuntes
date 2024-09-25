@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"?>
+
+<arboles>
+
+   <Am>
+   
+     <nombre_común>Arce de Montpellier, Arce menor</nombre_común>
+     <vegetación>Caducifolio</vegetación>
+     <altura>De 6 a 10 metros</altura>
+     <forma_y_estructura>Copa esférica. Tronco principal recto con bifurcaciones. Ramete colgante.</forma_y_estructura>
+     <color_en_primavera>Haz verde brillante, envés verde blanquecino</color_en_primavera>
+     <resistencia_a_las_heladas>Heladas fuertes (Hasta -15ºC)</resistencia_a_las_heladas>
+   
+   </Am>
+      
+   <Oe>
+      <nombre_común>Olivo</nombre_común>
+     <vegetación>Perenne</vegetación>
+     <altura>De 8 a 15 metros</altura>
+     <forma_y_estructura>Copa irregular. Tronco principal recto con bifurcaciones. Ramete colgante.</forma_y_estructura>
+     <color_en_primavera>Haz verde brillante, envés verde blanquecino</color_en_primavera>
+   </Oe>
+</arboles>
+   

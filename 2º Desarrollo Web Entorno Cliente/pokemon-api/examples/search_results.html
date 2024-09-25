@@ -1,0 +1,60 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <title>Mini Pokedex</title>
+  <script defer="" src="index.js"></script>
+  <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <h1>Pokedex</h1>
+    <div id="searchbar">
+      <input type="text" id="pokemon-name" value="">
+      <button id="search">Search</button>
+    </div>
+    <div id="results" class="">
+      <div id="pokemon-details">
+        <h2>pikachu</h2>
+        <img id="pokemon_image"
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+          alt="Image of pikachu">
+      </div>
+      <div id="evolution">
+        <h2>Evolution chain</h2>
+        <div id="evolution-data">
+          <div class="evolution_details">
+            <h2>pichu</h2>
+            <img id="pokemon_image"
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/172.png"
+              alt="Image of pichu">
+          </div>
+          <p>Evolves to...</p>
+          <div class="evolution_details">
+            <h2>pikachu</h2>
+            <img id="pokemon_image"
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+              alt="Image of pikachu">
+          </div>
+          <p>Evolves to...</p>
+          <div class="evolution_details">
+            <h2>raichu</h2>
+            <img id="pokemon_image"
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png"
+              alt="Image of raichu">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="error-div" class="hidden">
+      <h2>Error getting pokemon data:</h2>
+      <div id="error-data"></div>
+    </div>
+  </main>
+</body>
+
+</html>

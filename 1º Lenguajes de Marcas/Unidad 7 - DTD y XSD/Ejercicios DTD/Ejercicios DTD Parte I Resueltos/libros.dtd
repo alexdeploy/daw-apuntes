@@ -1,0 +1,16 @@
+<!ELEMENT catalogo (libreria+)>
+<!ELEMENT libreria (libro+)>
+<!ATTLIST libreria nombre CDATA #REQUIRED>
+<!ATTLIST libreria web CDATA #REQUIRED>
+<!ELEMENT libro (ISBN, tematica, titulo, autor+, editorial, fecha, web_site, precio)>
+<!ELEMENT ISBN (#PCDATA)>
+<!ELEMENT tematica (#PCDATA)>
+<!ATTLIST tematica nivel CDATA #IMPLIED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT editorial (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ATTLIST fecha num_edicion CDATA #REQUIRED>
+<!ELEMENT web_site (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio moneda CDATA #REQUIRED>

@@ -1,0 +1,5 @@
+List of CPU Sockets - https://en.wikipedia.org/wiki/CPU_socket
+
+MiniFAQ doubts Unit 2 and 3 - https://www.youtube.com/watch?v=mtjw-QxTJGU
+
+Disk Scheduling Algorithms Animations - https://www.uttyler.edu/files/cosc3355/animations/

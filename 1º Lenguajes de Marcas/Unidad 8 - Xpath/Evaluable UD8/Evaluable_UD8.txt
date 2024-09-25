@@ -1,0 +1,33 @@
+
+EJERCICIO 1
+
+ 1. /ies/nombre
+ 2. /ies/web/text()
+ 3. //ciclo/nombre/text()
+ 4. //ciclo/@id
+ 5. //decretoTitulo/@año
+ 6. //ciclo[grado="Medio"]
+ 7. //ciclo[grado="Superior"]/nombre
+ 8. //decretoTitulo[@año<2010]/../nombre/text()
+ 9. //decretoTitulo[@año=2008 or @año=2010]/../nombre/text()
+
+EJERCICIO 2
+
+ 1. //nombre/text()
+ 2. //modulo[ciclo="CI"]/nombre/text()
+ 3. //modulo[curso=2]/nombre/text()
+ 4. //modulo[horasSemanales<5]/nombre/text()
+ 5. //modulo[ciclo="CI" and curso=1]/nombre/text()
+ 6. //horasSemanales[.>3]/node()
+
+EJERCICIO 3
+
+ 1. //modulo[ciclo=//ciclo[nombre="Sistemas Microinformáticos y Redes"]/@id]/nombre/text()
+ 2. //ciclo[@id=//modulo[nombre="Lenguajes de marcas y sistemas de gestión de información"]/ciclo]/nombre/text()
+ 3. //modulo[ciclo=//ciclo[grado="Superior"]/@id]/nombre/text()
+ 4. //modulo[ciclo=//ciclo[decretoTitulo/@año=2008]/@id]/nombre/text()
+ 5. //ciclo[@id=//modulo[curso=1]/ciclo]/grado/text()
+
+
+Realizado por: Alejandro Soriano Rueda
+

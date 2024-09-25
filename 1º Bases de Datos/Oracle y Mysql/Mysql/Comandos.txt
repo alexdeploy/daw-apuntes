@@ -1,0 +1,41 @@
+* Abrir WAMP en terminal:
+
+cd C:\Bitnami\wampstack-8.0.3-0\
+use_wampstack
+
+* Conectar a mysql
+
+mysql -h localhost -u root -p
+
+* Mostrar Databases
+
+show databases;
+
+* Cambiar de database
+
+use database_name
+
+* Mostrar tablas
+
+show tables;
+
+* Mostrar como se creó una tabla (propiedades)
+
+show create table table_name;
+
+* Crear una tabla con sus dimensiones
+
+CREATE TABLE table_name (
+atr_name VARCHAR(20) PRIMARY KEY;
+atr_name VARCHAR(30) NOT NULL;
+atr_name VARCHAR(30)
+);
+
+* Ejecutar un script
+
+source "ruta de archivo"
+
+
+
+
+

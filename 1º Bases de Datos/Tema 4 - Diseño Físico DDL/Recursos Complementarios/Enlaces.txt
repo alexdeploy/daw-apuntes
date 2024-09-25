@@ -1,0 +1,1 @@
+BD047 Sintaxis SQL CHECK constraint (Oracle, MySQL, Postgres)URL - https://www.w3schools.com/sql/sql_check.asp

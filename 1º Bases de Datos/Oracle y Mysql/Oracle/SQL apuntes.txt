@@ -1,0 +1,67 @@
+* Login:
+
+comando - connect
+
+* Usuarios:
+
+system / sys
+
+sysdba (Administrador base de datos)
+
+sysoper (Operador base de datos)
+
+comando - connect as "user"
+
+* Existe una tabla llamada dual que es visible por todos los usuarios y que
+permite seleccionar las variables del sistema.
+
+comando - select sysdate, user from dual;
+
+* TABLESPACE (es un espacio lógico de
+almacenamiento de tablas que puede estar compuesto por uno o
+varios ficheros)
+
+comando -
+
+CREATE TABLESPACE datosalumno
+DATAFILE 'C:\oraclexe\app\oracle\oradata\XE\datosalumno01.dbf' SIZE
+50M AUTOEXTEND ON NEXT 50M MAXSIZE 300M
+EXTENT MANAGEMENT LOCAL UNIFORM SIZE 10M
+SEGMENT SPACE MANAGEMENT AUTO;
+
+* Redimensionar fichero (no TABLESPACE)
+
+ALTER DATABASE DATAFILE AUTOEXTEND ON NEXT 5M MAXSIZE 1G;
+
+* Crear usuario:
+
+CREATE USER alumno IDENTIFIED BY alumno
+DEFAULT TABLESPACE datosalumno;
+
+* Dar persmisos de administrador:
+
+RANT CONNECT, RESOURCE TO alumno;
+
+* Ver usuarios:
+
+Select * from all_users;
+
+* Utilizar script:
+
+comando - @ "ruta del archivo";
+
+* Mostrar tablas
+
+select table_name from user_tables;
+
+* Mostrar informacion tabla
+
+desc tabla_name;
+
+
+
+
+
+
+
+

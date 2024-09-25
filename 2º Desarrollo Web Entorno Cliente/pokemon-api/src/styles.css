@@ -1,0 +1,60 @@
+body{
+  font-family: "Poppins", sans-serif;
+}
+main {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#not_found {
+  color: white;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#results {
+  background-color: white;
+  margin-top: 10px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#results #pokemon_image {
+  height: 200px;
+  display: block;
+}
+
+#pokemon-details {
+  border: 2px solid black;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.evolution_details {
+  display: flex;
+  align-items: center;
+}
+
+.evolution_details h2 {
+  margin-top: 0;
+}
+.evolution_details p {
+  margin: 0;
+}
+
+#searchbar {
+  background-color: lime;
+  display: flex;
+  justify-content: center;
+}
+

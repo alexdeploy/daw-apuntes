@@ -1,0 +1,5 @@
+Juez SQL - https://aprendeaprogramar.org/moodle/
+
+Otro juez para practicar consultas básicas - https://sqlzoo.net/wiki/SELECT_basics
+
+SQL Teaching - https://www.sqlteaching.com/

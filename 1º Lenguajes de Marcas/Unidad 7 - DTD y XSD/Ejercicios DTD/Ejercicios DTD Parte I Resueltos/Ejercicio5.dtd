@@ -1,0 +1,15 @@
+<!ELEMENT ediciones_aranda (cabecera, informe)>
+<!ELEMENT cabecera (titulo, contenido, descripcion, fecha_informe)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT contenido (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT fecha_informe (#PCDATA)>
+<!ELEMENT informe (region+, trimestre, libros_vendidos)>
+<!ELEMENT region (norte | centro | sur)>
+<!ELEMENT norte (#PCDATA| trim| lib)*>
+<!ELEMENT centro (#PCDATA|trim| lib)*>
+<!ELEMENT sur (#PCDATA|trim| lib)*>
+<!ELEMENT trim (#PCDATA)>
+<!ELEMENT lib (#PCDATA)>
+<!ELEMENT trimestre (#PCDATA)>
+<!ELEMENT libros_vendidos (#PCDATA)>

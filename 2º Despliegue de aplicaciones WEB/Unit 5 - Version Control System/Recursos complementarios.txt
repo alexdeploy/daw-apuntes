@@ -1,0 +1,3 @@
+https://rogerdudler.github.io/git-guide/index.html - GIT SIMPLE GUIDE
+
+https://git-scm.com/book/en/v2 - PRO GIT BOOK

@@ -1,0 +1,5 @@
+How to create an image using CloneZilla - https://www.youtube.com/watch?v=xnOWZYcekCM
+
+Restoring a disk with Clonezilla (from Samba) - https://www.youtube.com/watch?v=4uY73mZkHiE
+
+How to clone multiple computers (Multi cast) - https://www.youtube.com/watch?v=g08otIfqdM4

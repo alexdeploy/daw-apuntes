@@ -1,0 +1,19 @@
+body {margin-left: 10px; 
+    margin-right: 10px;
+}
+
+h1 {border: 2px solid #00F; 
+    margin-top: 30px; 
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+
+h2 {border: 2px solid #AAA; 
+    padding: 5px; 
+    margin-top: 15px; 
+    margin-bottom: 15px;
+}
+
+ul {border: 2px solid #0F0;}
+
+li{margin: 15px;}

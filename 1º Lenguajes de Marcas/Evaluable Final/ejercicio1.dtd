@@ -1,0 +1,14 @@
+<!ELEMENT music (discs)>
+<!ELEMENT discs (disc+)>
+<!ELEMENT disc (#PCDATA | premiere | title | group | singer)*>
+<!ELEMENT premiere (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT group (#PCDATA)>
+<!ELEMENT singer (#PCDATA)>
+<!ATTLIST disc titulo CDATA #REQUIRED>
+<!ATTLIST group fecha_nacimiento CDATA #IMPLIED>
+<!ATTLIST group pais_nacimiento CDATA #IMPLIED>
+<!ATTLIST singer fecha_nacimiento CDATA #IMPLIED>
+<!ATTLIST singer pais_nacimiento CDATA #IMPLIED>
+
+<!-- Nombre: Alejandro Soriano Rueda-->

@@ -1,0 +1,8 @@
+
+8,00 / 10,00
+
+Fallos:
+
+DTD:
+- El XML no es válido según el DTD
+- El elemento linea sólo va a tener una descripcion, una cantidad, puede o no tener ...

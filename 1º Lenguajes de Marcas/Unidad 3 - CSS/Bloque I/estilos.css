@@ -1,0 +1,30 @@
+body {
+	background: url(../images/fondo.jpg) no-repeat center center fixed;
+	background-size: cover;
+	text-align: center;
+}
+
+h1 {
+	background-color: #C6C8CA;
+	color: white;
+	border-left: solid 10px;
+	border-left-color: #FF4C3B;
+	
+}
+
+img {
+	border-color: black;
+	border: solid 15px;
+	height: 400px;
+}
+
+ul {
+list-style:none;
+}
+
+li {
+border-color: black;
+	border: solid 1PX;
+	display: inline;
+}
+
